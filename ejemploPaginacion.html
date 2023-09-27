@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>pagination</title>
+</head>
+<body>
+    <div style="display: grid;place-content: center;">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Base Experience
+                    </th>
+                    <th>
+                        Height
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="paginationBody">
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td style="width: 15%;">
+                        <i class="fa fa-angle-double-left fa-2x PrimerPagina" aria-hidden="true">
+                        </i>
+                    </td>
+                    <td style="width: 15%;">
+                        <i class="fa fa-angle-left fa-2x atrasPagina" aria-hidden="true" >
+                        </i>
+                    </td>
+                    <td style="width: 40%;text-align: center;">
+                        <b class="registrosMostrados">
+
+                        </b>
+                    </td>
+                    <td style="width: 15%;text-align: right;">
+                        <i class="fa fa-angle-right fa-2x adeltantePagina" aria-hidden="true">
+                        </i>
+                    </td>
+                    <td style="width: 15%;text-align: right;">
+                        <i class="fa fa-angle-double-right fa-2x UltimaPagina" aria-hidden="true">
+                        </i>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>
+
+<script src="{baseURL}\SimplePagination.js"></script>
+
+<script>
+    //instanciar la clase para paginar.
+    const pagination = new Pagination()
+    
+    //Obtener la información de pokemons segun la cantidad que ingreses
+    async function getPokemonsAmount(amount = 40)
+    {   
+        //modíficar la cantidad de registros mostrados por página, de no hacerlo se mostraran de 5 en 5. 
+        pagination.ingresarCantidadRegistrosMostrados(10);
+
+        //consltar la infomación de los pokemon desde la pokeapi. 
+        let pokemons = [];
+        for (let index = 1; index <= amount; index++) {
+            await getPokemon(index)
+            .then(data => {
+                if(data)
+                {
+                    pokemons.push(data);
+                }
+                else
+                {
+                    console.log('Error al obtener los datos.');
+                }
+           })
+        }
+
+        //Ingresar los datos que se quieren páginar.
+        pagination.cargarDatos(pokemons);
+        //Ingresar los datos que se quieren mostrar en la tabla, en el orden que se quiere visualizar.
+        pagination.ingresarEstructura(["id","name","base_experience","height"]);
+    }
+
+    //consultar la api con información de pokemons
+    async function getPokemon(id)
+    {
+        const requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+        };
+
+        let pokemon = await fetch("https://pokeapi.co/api/v2/pokemon/"+id, requestOptions)
+        return pokemon.json();
+    }
+
+    getPokemonsAmount();
+    
+</script>
