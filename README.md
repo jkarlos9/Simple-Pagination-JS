@@ -1,5 +1,5 @@
 # Simple-Pagination-JS
-Esta es una librería para paginación enfocada el diseño libre, solo necesitas importar font awesome 4.7.0.
+Esta es una librería para paginación enfocada en el diseño libre, solo necesitas importar font awesome 4.7.0.
 
 El proyecto esta pensado para paginar sin neceidad de muchas importaciones como bootstrap o JQuery, dando así una libertad de diseño.
 
