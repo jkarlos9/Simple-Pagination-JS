@@ -1,0 +1,14 @@
+{
+  "name": "simple-pagination-js",
+  "version": "1.0.0",
+  "description": "Esta es una librería para paginación enfocada en el diseño libre, solo necesitas importar font awesome 4.7.0.",
+  "main": "SimplePagination.js",
+  "scripts": {
+    "test": "echo \"No tests specified\"",
+    "build": "echo \"build complete\""
+  },
+  "keywords": [],
+  "author": "Codex",
+  "license": "ISC",
+  "type": "commonjs"
+}
