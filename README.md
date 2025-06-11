@@ -13,3 +13,19 @@ Para verificar el comportamiento de los iconos de paginación puedes abrir
 `ejemploPaginacion.html` en un navegador. Si la tabla muestra menos registros
 de los configurados por página, solo se visualizarán los datos sin mostrar los
 íconos para avanzar o retroceder de página.
+
+## Instalación
+
+Puedes instalar la librería mediante npm ejecutando:
+
+```bash
+npm install simple-pagination-js
+```
+
+Luego inclúyela en tu proyecto de la siguiente manera:
+
+```javascript
+const SimplePagination = require('simple-pagination-js');
+// o usando ES Modules
+// import SimplePagination from 'simple-pagination-js';
+```
