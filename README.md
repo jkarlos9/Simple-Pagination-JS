@@ -13,3 +13,8 @@ Para verificar el comportamiento de los iconos de paginación puedes abrir
 `ejemploPaginacion.html` en un navegador. Si la tabla muestra menos registros
 de los configurados por página, solo se visualizarán los datos sin mostrar los
 íconos para avanzar o retroceder de página.
+
+## Licencia
+
+Este proyecto está disponible bajo la licencia MIT. Consulta el archivo
+[`LICENSE`](LICENSE) para más información.
