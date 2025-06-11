@@ -59,7 +59,7 @@ class Pagination {
         }
         else
         {
-            //Iniciar la paginación y mostar los datos en la tabla.
+            //Iniciar la paginación y mostrar los datos en la tabla.
             this.paginacion()
             this.generarTabla(this.estructura,this.mostrarRegistros[this.indiceActual])
         }
