@@ -17,7 +17,7 @@ class Pagination {
         const atras = document.querySelector(".atrasPagina");
         atras.addEventListener("click", () => this.atrasPagina());
 
-        const adelante = document.querySelector(".adeltantePagina");
+        const adelante = document.querySelector(".adelantePagina");
         adelante.addEventListener("click", () => this.adelantePagina());
 
         const UltimaPagina = document.querySelector(".UltimaPagina");
@@ -128,12 +128,12 @@ class Pagination {
             if (cantidadPaginas == 1)
             {
                 document.querySelector(".UltimaPagina").style.display = "none";
-                document.querySelector(".adeltantePagina").style.display = "none";
+                document.querySelector(".adelantePagina").style.display = "none";
             }
             else 
             {
                 document.querySelector(".UltimaPagina").style.display = "block";
-                document.querySelector(".adeltantePagina").style.display = "block";
+                document.querySelector(".adelantePagina").style.display = "block";
             }
         }
 
@@ -181,7 +181,7 @@ class Pagination {
             document.querySelector(".PrimerPagina").style.display = "none";
             document.querySelector(".atrasPagina").style.display = "none";
             document.querySelector(".UltimaPagina").style.display = "block";
-            document.querySelector(".adeltantePagina").style.display = "block";
+            document.querySelector(".adelantePagina").style.display = "block";
         }
 
         //Mostrar iconos cuando solo existe una página
@@ -190,7 +190,7 @@ class Pagination {
             document.querySelector(".PrimerPagina").style.display = "none";
             document.querySelector(".atrasPagina").style.display = "none";
             document.querySelector(".UltimaPagina").style.display = "none";
-            document.querySelector(".adeltantePagina").style.display = "none";
+            document.querySelector(".adelantePagina").style.display = "none";
         }
 
         //Calcularel cual es el primer y ultimo registro que se esta mostrando
@@ -206,13 +206,13 @@ class Pagination {
             {
                 mostrado = this.CantidadRegistros;
                 document.querySelector(".UltimaPagina").style.display = "none";
-                document.querySelector(".adeltantePagina").style.display = "none";
+                document.querySelector(".adelantePagina").style.display = "none";
             }
 
             if (this.CantidadRegistros == this.cantidadRegistrosMostrados) 
             {
                 document.querySelector(".UltimaPagina").style.display = "none";
-                document.querySelector(".adeltantePagina").style.display = "none";
+                document.querySelector(".adelantePagina").style.display = "none";
             }
         } 
         else 
@@ -237,7 +237,7 @@ class Pagination {
         document.querySelector(".PrimerPagina").style.display = "none";
         document.querySelector(".atrasPagina").style.display = "none";
         document.querySelector(".UltimaPagina").style.display = "block";
-        document.querySelector(".adeltantePagina").style.display = "block";
+        document.querySelector(".adelantePagina").style.display = "block";
         this.indicepagina = 0;
         this.moverPaginas(this.indicepagina);
     }
@@ -251,7 +251,7 @@ class Pagination {
 
         if (this.indicepagina == this.cantidadPaginas - 1) {
             document.querySelector(".UltimaPagina").style.display = "none";
-            document.querySelector(".adeltantePagina").style.display = "none";
+            document.querySelector(".adelantePagina").style.display = "none";
         }
 
         this.moverPaginas(this.indicepagina);
@@ -261,7 +261,7 @@ class Pagination {
     ultimaPagina() 
     {
         document.querySelector(".UltimaPagina").style.display = "none";
-        document.querySelector(".adeltantePagina").style.display = "none";
+        document.querySelector(".adelantePagina").style.display = "none";
         document.querySelector(".PrimerPagina").style.display = "block";
         document.querySelector(".atrasPagina").style.display = "block";
         let ultimapagina = this.cantidadPaginas;
@@ -282,7 +282,7 @@ class Pagination {
         }
 
         document.querySelector(".UltimaPagina").style.display = "block";
-        document.querySelector(".adeltantePagina").style.display = "block";
+        document.querySelector(".adelantePagina").style.display = "block";
 
         this.moverPaginas(this.indicepagina);
     }
