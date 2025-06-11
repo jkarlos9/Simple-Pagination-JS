@@ -14,6 +14,7 @@ Para verificar el comportamiento de los iconos de paginación puedes abrir
 de los configurados por página, solo se visualizarán los datos sin mostrar los
 íconos para avanzar o retroceder de página.
 
+
 ## Instalación
 
 Puedes instalar la librería mediante npm ejecutando:
@@ -29,3 +30,8 @@ const SimplePagination = require('simple-pagination-js');
 // o usando ES Modules
 // import SimplePagination from 'simple-pagination-js';
 ```
+=======
+## Licencia
+
+Este proyecto está disponible bajo la licencia MIT. Consulta el archivo
+[`LICENSE`](LICENSE) para más información.
