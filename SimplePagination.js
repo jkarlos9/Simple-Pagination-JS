@@ -125,11 +125,11 @@ class Pagination {
             }
 
             //Mostrar y ocultar iconos de paginación
-            if (cantidadPaginas == this.cantidadRegistrosMostrados) 
+            if (cantidadPaginas == 1)
             {
                 document.querySelector(".UltimaPagina").style.display = "none";
                 document.querySelector(".adeltantePagina").style.display = "none";
-            } 
+            }
             else 
             {
                 document.querySelector(".UltimaPagina").style.display = "block";
