@@ -125,7 +125,7 @@ class Pagination {
             }
 
             //Mostrar y ocultar iconos de paginación
-            if (cantidadPaginas === 1)
+            if (cantidadPaginas == 1)
             {
                 document.querySelector(".UltimaPagina").style.display = "none";
                 document.querySelector(".adeltantePagina").style.display = "none";
